@@ -5,12 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: grid;
+
   place-content: center;
+  background-color: aquamarine;
+}
+.App{
+  text-align: center;
+  padding: 15px;
 }
  textarea{
   font-family: inherit;
-  margin-bottom: 8px;
   padding-left: 5px;
  }
 
@@ -32,21 +36,50 @@ img{
 
 ul li{
   border-radius: 4px;
-  border: 1px solid #eee;
+  border: 1px solid #000;
   list-style: none;
   margin-bottom: 16px;
   max-width: 320px;
   padding: 8px 32px;
+  background-color: #fff;
 }
 
 form{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.formSty{
+  margin-bottom: 15px;
 }
 
+.formBtn{
+  display: flex;
+  flex-direction: row;
+}
+.formBtn button{
+  margin: 0 0 0 4px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border-style: none;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+.formBtn button:hover{
+  background-color: azure;
+  color: #000;
+  transition: all 0.85s;
+}
 form input{
   border: 1px solid #ccc;
   border-radius: 2px;
   padding: 4px 6px;
-  margin: 0px 0px 4px;
+  margin: 0px 4px 0px 0px;
+}
+
+.header{
+  background-color: #fff;
+  padding: 10px;
+}
+.nav{
+  text-align: center;
 }

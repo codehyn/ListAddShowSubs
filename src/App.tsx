@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState, useRef } from 'react';
+import Header from './components/Header'
 import List from './components/List';
 import Form from './components/Form'
 import {Sub} from './types'
@@ -27,6 +27,7 @@ const INITIAL_STATE =[
 function App() {
   const [subs, setSubs] = useState<AppState["subs"]>([])
   const [newSubsNumber, setNewSubsNumber] = useState<AppState["newSubsNumber"]>(0)
+  const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setSubs(INITIAL_STATE)
@@ -37,11 +38,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>midu subs</h1>
-      <List subs={subs} />
+    <>
+    <Header />
+      <div className="App" ref={divRef}>
       <Form onNewSub={handleNewSub} />
-    </div>
+      <List subs={subs} />
+      </div>
+    </>
   );
 }
 
